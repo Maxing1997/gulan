@@ -1,0 +1,7 @@
+[ERROR] (/home/m/Hack/network/gulan/src/gulan.c:166: errno: Too many open files) EMFILE problem
+[ERROR] (/home/m/Hack/network/gulan/src/util.c:54: errno: Bad file descriptor) fcntl
+[ERROR] (/home/m/Hack/network/gulan/src/gulan.c:174: errno: Bad file descriptor) make_socket_non_blocking
+
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:175) new connection fd -1
+[ERROR] (/home/m/Hack/network/gulan/src/epoll.c:17: errno: Bad file descriptor) lan_epoll_add: epoll_ctl
+

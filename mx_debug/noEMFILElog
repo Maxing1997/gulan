@@ -1,0 +1,23 @@
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:139) gulan starte.
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:173) new connection fd 5
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:198) new data from fd 5
+[INFO] (/home/m/Hack/network/gulan/src/http.c:63) read return 0, ready to close fd 5, remain_size = 8123
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:173) new connection fd 5
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:173) new connection fd 7
+...
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:173) new connection fd 1022
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:173) new connection fd 1023
+[ERROR] (/home/m/Hack/network/gulan/src/gulan.c:166: errno: Too many open files) accept
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:198) new data from fd 82
+[INFO] (/home/m/Hack/network/gulan/src/http.c:78) ready to parse request line
+[INFO] (/home/m/Hack/network/gulan/src/http.c:87) method == GET
+[INFO] (/home/m/Hack/network/gulan/src/http.c:88) uri == /
+[INFO] (/home/m/Hack/network/gulan/src/http.c:198) filename = ./html/index.html
+[ERROR] (/home/m/Hack/network/gulan/src/http.c:264: errno: Too many open files) open error
+
+[ERROR] (/home/m/Hack/network/gulan/src/http.c:267: errno: Bad file descriptor) mmap error
+
+[ERROR] (/home/m/Hack/network/gulan/src/rio.c:46: errno: Bad address) errno == 14
+
+[INFO] (/home/m/Hack/network/gulan/src/http.c:137) no keep_alive! ready to close
+[INFO] (/home/m/Hack/network/gulan/src/gulan.c:198) new data from fd -1152701360

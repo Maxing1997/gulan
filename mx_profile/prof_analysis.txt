@@ -1,0 +1,76 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ns/call  ns/call  name    
+ 34.10      0.15     0.15   311128   482.23   803.72  serve_static
+ 22.73      0.25     0.10   622256   160.74   160.74  rio_writen
+ 18.19      0.33     0.08                             do_request
+  6.82      0.36     0.03   311128    96.45    96.45  lan_http_handle_header
+  6.82      0.39     0.03   311128    96.45    96.45  lan_http_parse_request_body
+  4.55      0.41     0.02   311299    64.26    64.26  lan_http_close_conn
+  2.27      0.42     0.01   311128    32.15    32.15  lan_http_parse_request_line
+  2.27      0.43     0.01                             rio_readn
+  2.27      0.44     0.01                             sighandler
+  0.00      0.44     0.00   311128     0.00     0.00  get_shortmsg_from_status_code
+  0.00      0.44     0.00   311128     0.00     0.00  lan_http_process_ignore
+  0.00      0.44     0.00   311128     0.00     0.00  lan_init_out_t
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) for 2.27% of 0.44 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     95.5    0.08    0.34                 do_request [1]
+                0.15    0.10  311128/311128      serve_static [2]
+                0.03    0.00  311128/311128      lan_http_parse_request_body [5]
+                0.03    0.00  311128/311128      lan_http_handle_header [4]
+                0.02    0.00  311299/311299      lan_http_close_conn [6]
+                0.01    0.00  311128/311128      lan_http_parse_request_line [7]
+                0.00    0.00  311128/311128      lan_init_out_t [12]
+-----------------------------------------------
+                0.15    0.10  311128/311128      do_request [1]
+[2]     56.8    0.15    0.10  311128         serve_static [2]
+                0.10    0.00  622256/622256      rio_writen [3]
+                0.00    0.00  311128/311128      get_shortmsg_from_status_code [10]
+-----------------------------------------------
+                0.10    0.00  622256/622256      serve_static [2]
+[3]     22.7    0.10    0.00  622256         rio_writen [3]
+-----------------------------------------------
+                0.03    0.00  311128/311128      do_request [1]
+[4]      6.8    0.03    0.00  311128         lan_http_handle_header [4]
+                0.00    0.00  311128/311128      lan_http_process_ignore [11]
+-----------------------------------------------
+                0.03    0.00  311128/311128      do_request [1]
+[5]      6.8    0.03    0.00  311128         lan_http_parse_request_body [5]
+-----------------------------------------------
+                0.02    0.00  311299/311299      do_request [1]
+[6]      4.5    0.02    0.00  311299         lan_http_close_conn [6]
+-----------------------------------------------
+                0.01    0.00  311128/311128      do_request [1]
+[7]      2.3    0.01    0.00  311128         lan_http_parse_request_line [7]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      2.3    0.01    0.00                 rio_readn [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[9]      2.3    0.01    0.00                 sighandler [9]
+-----------------------------------------------
+                0.00    0.00  311128/311128      serve_static [2]
+[10]     0.0    0.00    0.00  311128         get_shortmsg_from_status_code [10]
+-----------------------------------------------
+                0.00    0.00  311128/311128      lan_http_handle_header [4]
+[11]     0.0    0.00    0.00  311128         lan_http_process_ignore [11]
+-----------------------------------------------
+                0.00    0.00  311128/311128      do_request [1]
+[12]     0.0    0.00    0.00  311128         lan_init_out_t [12]
+-----------------------------------------------
+
+Index by function name
+
+   [1] do_request              [5] lan_http_parse_request_body [8] rio_readn
+  [10] get_shortmsg_from_status_code [7] lan_http_parse_request_line [3] rio_writen
+   [6] lan_http_close_conn    [11] lan_http_process_ignore [2] serve_static
+   [4] lan_http_handle_header [12] lan_init_out_t          [9] sighandler
