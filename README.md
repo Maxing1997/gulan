@@ -2,6 +2,8 @@
 
 一个简单的http服务器
 
+special thanks to [zaver](https://github.com/zyearn/zaver)
+
 ## to do
 
 - [ ] LRU cache
